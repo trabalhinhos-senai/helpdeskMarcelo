@@ -1,17 +1,17 @@
 package helpdesk.helpdesk;
 
-public class Usuario {
+public class UsuarioDTO {
 
-	public static final Usuario NULL_VALUE = new Usuario(-1, "", "", "", 0, 0);
+	public static final UsuarioDTO NULL_VALUE = new UsuarioDTO((long)-1, "", "", "", 0, 0);
 	
-	 private final int id;
+	 private final Long id;
 	 private final String nomeUsuario;
 	 private final String loginUsuario;
 	 private final String senhaUsuario;
 	 private final int grupoAcessoId;
 	 private final int configId;
 	 
-	 public Usuario(int id, String nomeUsuario, String loginUsuario, 
+	 public UsuarioDTO(Long id, String nomeUsuario, String loginUsuario, 
 			 		String senhaUsuario, int grupoAcessoId, int configId) {
 						this.id = id;
 						this.nomeUsuario = nomeUsuario;
@@ -21,7 +21,7 @@ public class Usuario {
 						this.configId = configId;
 	}
 	 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 	public String getNomeUsuario() {
