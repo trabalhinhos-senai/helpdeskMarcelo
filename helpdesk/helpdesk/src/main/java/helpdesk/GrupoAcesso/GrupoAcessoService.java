@@ -13,16 +13,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+@RequestMapping("/grupoacesso")
 public class GrupoAcessoService {
-	
 	private final GrupoAcessoController grupoAcessoController;
 	
 	GrupoAcessoService(final GrupoAcessoController grupoAcessoController){
 		this.grupoAcessoController = grupoAcessoController;
 	}
 
-	@RequestMapping("/list")
+	@GetMapping("/list")
 	public List<GrupoAcessoDTO> List(){
 		return this.grupoAcessoController.getAllGruposAcesso();
     }
