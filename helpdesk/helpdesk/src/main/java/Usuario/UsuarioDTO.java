@@ -1,8 +1,8 @@
-package helpdesk.helpdesk;
+package Usuario;
 
 public class UsuarioDTO {
 
-	public static final UsuarioDTO NULL_VALUE = new UsuarioDTO((long)-1, "", "", "", 0, 0);
+	 public static final UsuarioDTO NULL_VALUE = new UsuarioDTO((long)-1, "", "", "", 0, 0);
 	
 	 private final Long id;
 	 private final String nomeUsuario;

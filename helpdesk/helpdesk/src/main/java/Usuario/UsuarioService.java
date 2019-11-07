@@ -1,4 +1,4 @@
-package helpdesk.helpdesk;
+package Usuario;
 
 import java.util.List;
 
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 public class UsuarioService {
-
 
 	private final UsuarioController usuarioController;
 	

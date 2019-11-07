@@ -1,4 +1,4 @@
-package helpdesk.helpdesk;
+package Usuario;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ public class UsuarioController {
 		return new UsuarioDTO(Id, nomeUsuario, loginUsuario, senhaUsuario, grupoAcessoId, configId);
 	}
 	
-	private static void updateEntityFromFTO(final UsuarioDTO usuarioDTO, final UsuarioEntity usuarioEntity) {
+	private static void updateEntityFromDTO(final UsuarioDTO usuarioDTO, final UsuarioEntity usuarioEntity) {
 		usuarioEntity.setNomeUsuario(usuarioDTO.getNomeUsuario());
 		usuarioEntity.setLoginUsuario(usuarioDTO.getLoginUsuario());
 		usuarioEntity.setSenhaUsuario(usuarioDTO.getSenhaUsuario());
@@ -79,7 +79,7 @@ public class UsuarioController {
 		if(optionalUsuario.isPresent()) {
 			final UsuarioEntity usuarioEntity = optionalUsuario.get();
 			final UsuarioDTO oldUsuario = UsuarioController.toDTO(usuarioEntity);
-			UsuarioController.updateEntityFromFTO(usuarioDTO, usuarioEntity);
+			UsuarioController.updateEntityFromDTO(usuarioDTO, usuarioEntity);
 			this.usuarioRepository.save(usuarioEntity);
 			return oldUsuario;
 		}

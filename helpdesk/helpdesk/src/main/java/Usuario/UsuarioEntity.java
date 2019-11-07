@@ -1,4 +1,4 @@
-package helpdesk.helpdesk;
+package Usuario;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,6 +22,10 @@ public class UsuarioEntity {
 	@Column
 	private Integer configId;
 	
+	protected UsuarioEntity() {
+		
+	}
+	
 	public UsuarioEntity(Long id, String nomeUsuario, String loginUsuario, String senhaUsuario, Integer grupoAcessoId,
 			Integer configId) {
 		super();
@@ -33,6 +37,10 @@ public class UsuarioEntity {
 		this.configId = configId;
 	}
 	
+	@Override
+	public String toString() {
+		return "UsuarioEntity [id=" + id + ", nomeUsuario=" + nomeUsuario + ", loginUsuario=" + loginUsuario + ", senhaUsuario=" + senhaUsuario + ", grupoAcessoId=" + grupoAcessoId + ", configId=" + configId + "]";
+	}
 	public Long getId() {
 		return id;
 	}
