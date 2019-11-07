@@ -1,4 +1,4 @@
-package GrupoAcesso;
+package helpdesk.GrupoAcesso;
 
 public class GrupoAcessoDTO {
 	

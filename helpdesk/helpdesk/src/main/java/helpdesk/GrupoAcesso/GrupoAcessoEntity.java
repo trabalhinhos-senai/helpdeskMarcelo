@@ -1,4 +1,4 @@
-package GrupoAcesso;
+package helpdesk.GrupoAcesso;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,9 +14,18 @@ public class GrupoAcessoEntity {
 	@Column
 	private String nomeGrupo;
 	
+	protected GrupoAcessoEntity() {
+		
+	}
+	
 	public GrupoAcessoEntity(String nomeGrupo) {
 		super();
 		this.nomeGrupo = nomeGrupo;
+	}
+	
+	@Override
+	public String toString() {
+		return "GrupoAcessoEntity [id=" + id + ", nomeGrupo=" + nomeGrupo + "]";
 	}
 	
 	public String getNomeGrupo() {
