@@ -1,7 +1,6 @@
-package helpdesk.Usuario;
+package helpdesk.helpdesk.Usuario;
 
 import java.util.List;
-
 import javax.validation.Valid;
 
 import org.springframework.http.HttpStatus;
@@ -32,7 +31,7 @@ public class UsuarioService {
 	@GetMapping("/get/{id}")
 	public ResponseEntity<UsuarioDTO> getUsuario(@PathVariable(value = "id") @Valid Long id) {
 		final UsuarioDTO usuarioDTO = this.usuarioController.getUsuario(id);
-		if(usuarioController.isExistsUsuarioByIdentifier(id)){
+		if(usuarioDTO.equals(UsuarioDTO.NULL_VALUE)){
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 		return new ResponseEntity<>(usuarioDTO, HttpStatus.OK);

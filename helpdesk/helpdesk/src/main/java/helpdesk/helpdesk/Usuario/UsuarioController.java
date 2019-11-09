@@ -1,4 +1,4 @@
-package helpdesk.Usuario;
+package helpdesk.helpdesk.Usuario;
 
 import java.util.ArrayList;
 import java.util.List;

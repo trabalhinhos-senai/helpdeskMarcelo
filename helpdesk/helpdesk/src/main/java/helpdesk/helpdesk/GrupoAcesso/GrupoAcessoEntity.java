@@ -1,4 +1,4 @@
-package helpdesk.GrupoAcesso;
+package helpdesk.helpdesk.GrupoAcesso;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,7 +10,7 @@ import javax.persistence.Id;
 (name = "tb_grupoacesso")
 public class GrupoAcessoEntity {
 	@Column
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	@Column
 	private String nomeGrupo;
@@ -19,8 +19,7 @@ public class GrupoAcessoEntity {
 		
 	}
 	
-	public GrupoAcessoEntity(String nomeGrupo) {
-		super();
+	public GrupoAcessoEntity(final String nomeGrupo) {
 		this.nomeGrupo = nomeGrupo;
 	}
 	
@@ -36,6 +35,11 @@ public class GrupoAcessoEntity {
 	public void setNomeGrupo(String nomeGrupo) {
 		if(nomeGrupo != null)
 			this.nomeGrupo = nomeGrupo;
+	}
+	
+	public void setId(Long id) {
+		if(id != null)
+			this.id = id;
 	}
 
 	public Long getId() {

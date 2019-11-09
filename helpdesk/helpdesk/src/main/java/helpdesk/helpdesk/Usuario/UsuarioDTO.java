@@ -1,4 +1,4 @@
-package helpdesk.Usuario;
+package helpdesk.helpdesk.Usuario;
 
 public class UsuarioDTO {
 

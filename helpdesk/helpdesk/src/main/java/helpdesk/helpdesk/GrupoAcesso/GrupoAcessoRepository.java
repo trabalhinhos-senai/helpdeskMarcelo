@@ -1,4 +1,4 @@
-package helpdesk.GrupoAcesso;
+package helpdesk.helpdesk.GrupoAcesso;
 
 import org.springframework.data.repository.CrudRepository;
 

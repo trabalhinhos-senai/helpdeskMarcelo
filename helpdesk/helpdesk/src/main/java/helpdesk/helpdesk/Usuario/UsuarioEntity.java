@@ -1,4 +1,4 @@
-package helpdesk.Usuario;
+package helpdesk.helpdesk.Usuario;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

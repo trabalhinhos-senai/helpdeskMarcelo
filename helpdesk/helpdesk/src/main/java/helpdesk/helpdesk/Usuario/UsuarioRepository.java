@@ -1,4 +1,4 @@
-package helpdesk.Usuario;
+package helpdesk.helpdesk.Usuario;
 
 
 import org.springframework.data.repository.CrudRepository;

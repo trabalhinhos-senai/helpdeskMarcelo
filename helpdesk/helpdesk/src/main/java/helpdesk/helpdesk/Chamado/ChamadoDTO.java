@@ -1,25 +1,25 @@
-package helpdesk.helpdesk;
+package helpdesk.helpdesk.Chamado;
 
-
-public class Chamado {
+public class ChamadoDTO {
 	
-	 private final int id;
+	 public static final ChamadoDTO NULL_VALUE = new ChamadoDTO("", "", "", "", "", "", 0, 0, 0, 0);
+	
 	 private final String solicitante;
 	 private final String titulo;
 	 private final String descricao;
+	 private final String status;
 	 private final String dataAbertura;
 	 private final String dataAlvo;
-	 
+
 	 private final int clienteId;
 	 private final int tipoAtividadeId;
 	 private final int prioridadeChamadoid;
 	 private final int usuarioId;
 	
 	 
-	 public Chamado(int id, String solicitante, String titulo, String descricao, String dataAbertura, String dataAlvo,
+	 public ChamadoDTO(String solicitante, String titulo, String descricao, String status, String dataAbertura, String dataAlvo,
 			int clienteId, int tipoAtividadeId, int prioridadeChamadoid, int usuarioId) {
-		super();
-		this.id = id;
+		this.status = status;
 		this.solicitante = solicitante;
 		this.titulo = titulo;
 		this.descricao = descricao;
@@ -32,10 +32,6 @@ public class Chamado {
 		this.usuarioId = usuarioId;
 	}
 	 
-
-	public int getId() {
-		return id;
-	}
 	public String getSolicitante() {
 		return solicitante;
 	}
@@ -63,7 +59,11 @@ public class Chamado {
 	public int getUsuarioId() {
 		return usuarioId;
 	}
-	 
+
+	public String getStatus() {
+		return status;
+	}
+	
 	 
 	 
 	

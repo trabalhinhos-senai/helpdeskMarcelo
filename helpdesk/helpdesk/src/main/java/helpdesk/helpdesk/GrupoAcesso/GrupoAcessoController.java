@@ -1,9 +1,12 @@
-package helpdesk.GrupoAcesso;
+package helpdesk.helpdesk.GrupoAcesso;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Controller;
+
+@Controller
 public class GrupoAcessoController {
 
 	private final GrupoAcessoRepository grupoAcessoRepository;
@@ -68,7 +71,7 @@ public class GrupoAcessoController {
 		return GrupoAcessoDTO.NULL_VALUE;
 	}
 	
-	public boolean isExistsGrupoAcessoByIdentifier(final Long id) {
+	/*public boolean isExistsGrupoAcessoByIdentifier(final Long id) {
 		return this.grupoAcessoRepository.existsById(id);
-	}
+	}*/
 }
