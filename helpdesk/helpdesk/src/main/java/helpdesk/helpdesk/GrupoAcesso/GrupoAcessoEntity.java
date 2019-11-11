@@ -1,5 +1,7 @@
 package helpdesk.helpdesk.GrupoAcesso;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,18 +10,18 @@ import javax.persistence.Id;
 
 @Entity
 (name = "tb_grupoacesso")
-public class GrupoAcessoEntity {
+public class GrupoAcessoEntity implements Serializable {
 	@Column
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column
+
 	private String nomeGrupo;
 	
 	protected GrupoAcessoEntity() {
 		
 	}
 	
-	public GrupoAcessoEntity(final String nomeGrupo) {
+	public GrupoAcessoEntity(String nomeGrupo) {
 		this.nomeGrupo = nomeGrupo;
 	}
 	

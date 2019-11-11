@@ -22,7 +22,8 @@ public class GrupoAcessoController {
 	
 	private static GrupoAcessoDTO toDTO(final GrupoAcessoEntity grupoAcessoEntity) {
 		final String nomeGrupo = grupoAcessoEntity.getNomeGrupo();
-		return new GrupoAcessoDTO(nomeGrupo);
+		final Long id = grupoAcessoEntity.getId();
+		return new GrupoAcessoDTO(id,nomeGrupo);
 	}
 	
 	private static void updateEntityFromDTO(final GrupoAcessoDTO grupoAcessoDTO, final GrupoAcessoEntity grupoAcessoEntity) {

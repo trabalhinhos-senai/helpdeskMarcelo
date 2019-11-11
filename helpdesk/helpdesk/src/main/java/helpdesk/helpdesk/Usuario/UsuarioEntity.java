@@ -1,5 +1,7 @@
 package helpdesk.helpdesk.Usuario;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +10,7 @@ import javax.persistence.Id;
 
 @Entity
 (name = "tb_usuario")
-public class UsuarioEntity {
+public class UsuarioEntity  {
 	@Column
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

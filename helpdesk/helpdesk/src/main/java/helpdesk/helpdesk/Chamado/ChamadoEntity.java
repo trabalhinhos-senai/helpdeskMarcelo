@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class ChamadoEntity {
 
 	@Column
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private  String solicitante;
 	private  String titulo;
