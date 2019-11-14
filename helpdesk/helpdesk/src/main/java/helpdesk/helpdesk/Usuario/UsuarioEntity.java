@@ -20,26 +20,21 @@ public class UsuarioEntity  {
 	private String loginUsuario;
 	@Column
 	private String senhaUsuario;
-	@Column
-	private Integer grupoAcessoId;
-	@Column
-	private Integer configId;
+	
 	
 	protected UsuarioEntity() {
 	}
 	
-	public UsuarioEntity(final String nomeUsuario, final String loginUsuario, final String senhaUsuario, final Integer grupoAcessoId,
-			final Integer configId) {
+	public UsuarioEntity(final String nomeUsuario, final String loginUsuario, final String senhaUsuario) {
 		this.nomeUsuario = nomeUsuario;
 		this.loginUsuario = loginUsuario;
 		this.senhaUsuario = senhaUsuario;
-		this.grupoAcessoId = grupoAcessoId;
-		this.configId = configId;
+		
 	}
 	
 	@Override
 	public String toString() {
-		return "UsuarioEntity [id=" + id + ", nomeUsuario=" + nomeUsuario + ", loginUsuario=" + loginUsuario + ", senhaUsuario=" + senhaUsuario + ", grupoAcessoId=" + grupoAcessoId + ", configId=" + configId + "]";
+		return "UsuarioEntity [id=" + id + ", nomeUsuario=" + nomeUsuario + ", loginUsuario=" + loginUsuario + ", senhaUsuario=" + senhaUsuario + "]";
 	}
 	
 	public Long getId() {
@@ -54,12 +49,7 @@ public class UsuarioEntity  {
 	public String getSenhaUsuario() {
 		return senhaUsuario;
 	}
-	public int getGrupoAcessoId() {
-		return grupoAcessoId;
-	}
-	public int getConfigId() {
-		return configId;
-	}
+	
 
 	public void setId(Long id) {
 		if(id != null)
@@ -81,15 +71,6 @@ public class UsuarioEntity  {
 			this.senhaUsuario = senhaUsuario;
 	}
 
-	public void setGrupoAcessoId(Integer grupoAcessoId) {
-		if(grupoAcessoId != null)
-			this.grupoAcessoId = grupoAcessoId;
-	}
 
-	public void setConfigId(Integer configId) {
-		if(configId != null)
-			this.configId = configId;
-	}
-	
 	
 }

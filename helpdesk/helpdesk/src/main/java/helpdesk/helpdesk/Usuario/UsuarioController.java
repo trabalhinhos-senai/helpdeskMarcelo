@@ -19,26 +19,23 @@ public class UsuarioController {
 		final String nomeUsuario = usuarioDTO.getNomeUsuario();
 		final String loginUsuario = usuarioDTO.getLoginUsuario();
 		final String senhaUsuario = usuarioDTO.getSenhaUsuario();
-		final int grupoAcessoId = usuarioDTO.getGrupoAcessoId();
-		final int configId = usuarioDTO.getConfigId();
-		return new UsuarioEntity(nomeUsuario, loginUsuario, senhaUsuario, grupoAcessoId, configId);
+
+		return new UsuarioEntity(nomeUsuario, loginUsuario, senhaUsuario);
 	} 
 	
 	private static UsuarioDTO toDTO(final UsuarioEntity usuarioEntity) {
 		final String nomeUsuario = usuarioEntity.getNomeUsuario();
 		final String loginUsuario = usuarioEntity.getLoginUsuario();
 		final String senhaUsuario = usuarioEntity.getSenhaUsuario();
-		final int grupoAcessoId = usuarioEntity.getGrupoAcessoId();
-		final int configId = usuarioEntity.getConfigId();
-		return new UsuarioDTO(nomeUsuario, loginUsuario, senhaUsuario, grupoAcessoId, configId);
+	
+		return new UsuarioDTO(nomeUsuario, loginUsuario, senhaUsuario);
 	}
 	
 	private static void updateEntityFromDTO(final UsuarioDTO usuarioDTO, final UsuarioEntity usuarioEntity) {
 		usuarioEntity.setNomeUsuario(usuarioDTO.getNomeUsuario());
 		usuarioEntity.setLoginUsuario(usuarioDTO.getLoginUsuario());
 		usuarioEntity.setSenhaUsuario(usuarioDTO.getSenhaUsuario());
-		usuarioEntity.setGrupoAcessoId(usuarioDTO.getGrupoAcessoId());
-		usuarioEntity.setConfigId(usuarioDTO.getConfigId());
+		
 		
 	}
 	

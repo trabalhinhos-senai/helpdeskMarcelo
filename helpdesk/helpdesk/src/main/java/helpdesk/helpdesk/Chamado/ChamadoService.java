@@ -49,7 +49,7 @@ public class ChamadoService {
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<ChamadoDTO> updateUsuario(@PathVariable final Long id, @RequestBody final ChamadoDTO chamadoDTO){
+	public ResponseEntity<ChamadoDTO> updateChamado(@PathVariable final Long id, @RequestBody final ChamadoDTO chamadoDTO){
 		final ChamadoDTO oldChamado = this.chamadoController.updateChamado(id, chamadoDTO);
 		if(oldChamado.equals(ChamadoDTO.NULL_VALUE)) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);

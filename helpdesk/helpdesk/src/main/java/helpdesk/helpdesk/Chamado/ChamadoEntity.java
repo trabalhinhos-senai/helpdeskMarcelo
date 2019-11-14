@@ -20,10 +20,8 @@ public class ChamadoEntity {
 	private  String dataAbertura;
 	private  String dataAlvo;
 
-	private  int clienteId;
-	private  int tipoAtividadeId;
-	private  int prioridadeChamadoid;
-	private  int usuarioId;
+	private  String prioridadeChamado;
+	
 		
 	
 	protected ChamadoEntity() {
@@ -31,26 +29,23 @@ public class ChamadoEntity {
 	}
 	
 	public ChamadoEntity(String solicitante, String titulo, String descricao, String status,
-			String dataAbertura, String dataAlvo, int clienteId, int tipoAtividadeId, int prioridadeChamadoid,
-			int usuarioId) {
+			String dataAbertura, String dataAlvo, String prioridadeChamado) {
 		this.solicitante = solicitante;
 		this.titulo = titulo;
 		this.descricao = descricao;
 		this.status = status;
 		this.dataAbertura = dataAbertura;
 		this.dataAlvo = dataAlvo;
-		this.clienteId = clienteId;
-		this.tipoAtividadeId = tipoAtividadeId;
-		this.prioridadeChamadoid = prioridadeChamadoid;
-		this.usuarioId = usuarioId;
+		
+		this.prioridadeChamado = prioridadeChamado;
+		
 	}
 
 	@Override
 	public String toString() {
 		return "ChamadoEntity [id=" + id + ", solicitante=" + solicitante + ", titulo=" + titulo + ", descricao="
 				+ descricao + ", status=" + status + ", dataAbertura=" + dataAbertura + ", dataAlvo=" + dataAlvo
-				+ ", clienteId=" + clienteId + ", tipoAtividadeId=" + tipoAtividadeId + ", prioridadeChamadoid="
-				+ prioridadeChamadoid + ", usuarioId=" + usuarioId + "]";
+				+  ", prioridadeChamado=" + prioridadeChamado + "]";
 	}
 
 	//Getters
@@ -78,20 +73,8 @@ public class ChamadoEntity {
 		return dataAlvo;
 	}
 
-	public int getClienteId() {
-		return clienteId;
-	}
-
-	public int getTipoAtividadeId() {
-		return tipoAtividadeId;
-	}
-
-	public int getPrioridadeChamadoid() {
-		return prioridadeChamadoid;
-	}
-
-	public int getUsuarioId() {
-		return usuarioId;
+	public String getPrioridadeChamado() {
+		return prioridadeChamado;
 	}
 	
 	public String getStatus() {
@@ -129,24 +112,9 @@ public class ChamadoEntity {
 			this.dataAlvo = dataAlvo;
 	}
 
-	public void setClienteId(Integer clienteId) {
-		if(clienteId != null)
-			this.clienteId = clienteId;
-	}
-
-	public void setTipoAtividadeId(Integer tipoAtividadeId) {
-		if(tipoAtividadeId != null)
-			this.tipoAtividadeId = tipoAtividadeId;
-	}
-
-	public void setPrioridadeChamadoid(Integer prioridadeChamadoid) {
-		if(prioridadeChamadoid != null)
-			this.prioridadeChamadoid = prioridadeChamadoid;
-	}
-
-	public void setUsuarioId(Integer usuarioId) {
-		if(usuarioId != null)
-			this.usuarioId = usuarioId;
+	public void setPrioridadeChamado(String prioridadeChamado) {
+		if(prioridadeChamado != null)
+			this.prioridadeChamado = prioridadeChamado;
 	}
 
 	public void setStatus(String status) {

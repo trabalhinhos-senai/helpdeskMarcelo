@@ -2,7 +2,7 @@ package helpdesk.helpdesk.Chamado;
 
 public class ChamadoDTO {
 	
-	 public static final ChamadoDTO NULL_VALUE = new ChamadoDTO("", "", "", "", "", "", 0, 0, 0, 0);
+	 public static final ChamadoDTO NULL_VALUE = new ChamadoDTO("", "", "", "", "", "","");
 	
 	 private final String solicitante;
 	 private final String titulo;
@@ -11,14 +11,11 @@ public class ChamadoDTO {
 	 private final String dataAbertura;
 	 private final String dataAlvo;
 
-	 private final int clienteId;
-	 private final int tipoAtividadeId;
-	 private final int prioridadeChamadoid;
-	 private final int usuarioId;
+	 private final String prioridadeChamado;
+	
 	
 	 
-	 public ChamadoDTO(String solicitante, String titulo, String descricao, String status, String dataAbertura, String dataAlvo,
-			int clienteId, int tipoAtividadeId, int prioridadeChamadoid, int usuarioId) {
+	 public ChamadoDTO(String solicitante, String titulo, String descricao, String status, String dataAbertura, String dataAlvo, String prioridadeChamado) {
 		this.status = status;
 		this.solicitante = solicitante;
 		this.titulo = titulo;
@@ -26,10 +23,8 @@ public class ChamadoDTO {
 		this.dataAbertura = dataAbertura;
 		this.dataAlvo = dataAlvo;
 		
-		this.clienteId = clienteId;
-		this.tipoAtividadeId = tipoAtividadeId;
-		this.prioridadeChamadoid = prioridadeChamadoid;
-		this.usuarioId = usuarioId;
+		this.prioridadeChamado = prioridadeChamado;
+		
 	}
 	 
 	public String getSolicitante() {
@@ -47,17 +42,9 @@ public class ChamadoDTO {
 	public String getDataAlvo() {
 		return dataAlvo;
 	}
-	public int getClienteId() {
-		return clienteId;
-	}
-	public int getTipoAtividadeId() {
-		return tipoAtividadeId;
-	}
-	public int getPrioridadeChamadoid() {
-		return prioridadeChamadoid;
-	}
-	public int getUsuarioId() {
-		return usuarioId;
+	
+	public String getPrioridadeChamado() {
+		return prioridadeChamado;
 	}
 
 	public String getStatus() {

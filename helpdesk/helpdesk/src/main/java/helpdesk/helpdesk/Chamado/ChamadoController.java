@@ -5,15 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import javax.validation.Valid;
-
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 public class ChamadoController {
@@ -31,11 +23,10 @@ public class ChamadoController {
 		final String status = chamadoDTO.getStatus();
 		final String dataAbertura = chamadoDTO.getDataAbertura();
 		final String dataAlvo = chamadoDTO.getDataAlvo();
-		final int clienteId = chamadoDTO.getClienteId();
-		final int tipoAtividadeId = chamadoDTO.getTipoAtividadeId();
-		final int prioridadeChamadoid = chamadoDTO.getPrioridadeChamadoid();
-		final int usuarioId = chamadoDTO.getUsuarioId();
-		return new ChamadoEntity(solicitante, titulo, descricao, status, dataAbertura, dataAlvo, clienteId, tipoAtividadeId, prioridadeChamadoid, usuarioId);
+		
+		final String prioridadeChamado = chamadoDTO.getPrioridadeChamado();
+		
+		return new ChamadoEntity(solicitante, titulo, descricao, status, dataAbertura, dataAlvo, prioridadeChamado);
 	} 
 	
 	private static ChamadoDTO toDTO(final ChamadoEntity chamadoEntity) {
@@ -45,11 +36,8 @@ public class ChamadoController {
 		final String status = chamadoEntity.getStatus();
 		final String dataAbertura = chamadoEntity.getDataAbertura();
 		final String dataAlvo = chamadoEntity.getDataAlvo();
-		final int clienteId = chamadoEntity.getClienteId();
-		final int tipoAtividadeId = chamadoEntity.getTipoAtividadeId();
-		final int prioridadeChamadoid = chamadoEntity.getPrioridadeChamadoid();
-		final int usuarioId = chamadoEntity.getUsuarioId();
-		return new ChamadoDTO(solicitante, titulo, descricao, status, dataAbertura, dataAlvo, clienteId, tipoAtividadeId, prioridadeChamadoid, usuarioId);
+		final String prioridadeChamado = chamadoEntity.getPrioridadeChamado();
+		return new ChamadoDTO(solicitante, titulo, descricao, status, dataAbertura, dataAlvo, prioridadeChamado);
 	}
 	
 	private static void updateEntityFromDTO(final ChamadoDTO chamadoDTO, final ChamadoEntity chamadoEntity) {
@@ -59,10 +47,9 @@ public class ChamadoController {
 		chamadoEntity.setStatus(chamadoDTO.getStatus());
 		chamadoEntity.setDataAbertura(chamadoDTO.getDataAbertura());
 		chamadoEntity.setDataAlvo(chamadoDTO.getDataAlvo());
-		chamadoEntity.setClienteId(chamadoDTO.getClienteId());
-		chamadoEntity.setTipoAtividadeId(chamadoDTO.getTipoAtividadeId());
-		chamadoEntity.setPrioridadeChamadoid(chamadoDTO.getPrioridadeChamadoid());
-		chamadoEntity.setUsuarioId(chamadoDTO.getUsuarioId());	
+		
+		chamadoEntity.setPrioridadeChamado(chamadoDTO.getPrioridadeChamado());
+			
 	}
 	
 	List<ChamadoDTO> getAllChamados(){
