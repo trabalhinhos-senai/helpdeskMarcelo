@@ -16,22 +16,25 @@ public class UsuarioController {
 	}
 	
 	private static UsuarioEntity toEntity(final UsuarioDTO usuarioDTO) {
+		final Long id = usuarioDTO.getId();
 		final String nomeUsuario = usuarioDTO.getNomeUsuario();
 		final String loginUsuario = usuarioDTO.getLoginUsuario();
 		final String senhaUsuario = usuarioDTO.getSenhaUsuario();
 
-		return new UsuarioEntity(nomeUsuario, loginUsuario, senhaUsuario);
+		return new UsuarioEntity(id, nomeUsuario, loginUsuario, senhaUsuario);
 	} 
 	
 	private static UsuarioDTO toDTO(final UsuarioEntity usuarioEntity) {
+		final Long id = usuarioEntity.getId();
 		final String nomeUsuario = usuarioEntity.getNomeUsuario();
 		final String loginUsuario = usuarioEntity.getLoginUsuario();
 		final String senhaUsuario = usuarioEntity.getSenhaUsuario();
 	
-		return new UsuarioDTO(nomeUsuario, loginUsuario, senhaUsuario);
+		return new UsuarioDTO(id, nomeUsuario, loginUsuario, senhaUsuario);
 	}
 	
 	private static void updateEntityFromDTO(final UsuarioDTO usuarioDTO, final UsuarioEntity usuarioEntity) {
+		usuarioEntity.setId(usuarioDTO.getId());
 		usuarioEntity.setNomeUsuario(usuarioDTO.getNomeUsuario());
 		usuarioEntity.setLoginUsuario(usuarioDTO.getLoginUsuario());
 		usuarioEntity.setSenhaUsuario(usuarioDTO.getSenhaUsuario());

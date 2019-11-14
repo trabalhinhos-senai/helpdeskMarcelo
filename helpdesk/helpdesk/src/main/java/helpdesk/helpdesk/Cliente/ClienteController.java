@@ -1,12 +1,9 @@
-package helpdesk.helpdesk.cliente;
+package helpdesk.helpdesk.Cliente;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.stereotype.Controller;
-
-
-
 
 @Controller
 public class ClienteController {

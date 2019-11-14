@@ -28,15 +28,16 @@ public class ChamadoEntity {
 		
 	}
 	
-	public ChamadoEntity(String solicitante, String titulo, String descricao, String status,
+	public ChamadoEntity(Long id, String solicitante, String titulo, String descricao, String status,
 			String dataAbertura, String dataAlvo, String prioridadeChamado) {
+		
+		this.id = id;
 		this.solicitante = solicitante;
 		this.titulo = titulo;
 		this.descricao = descricao;
 		this.status = status;
 		this.dataAbertura = dataAbertura;
 		this.dataAlvo = dataAlvo;
-		
 		this.prioridadeChamado = prioridadeChamado;
 		
 	}

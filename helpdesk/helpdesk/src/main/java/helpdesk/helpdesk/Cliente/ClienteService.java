@@ -1,4 +1,4 @@
-package helpdesk.helpdesk.cliente;
+package helpdesk.helpdesk.Cliente;
 
 import java.util.List;
 

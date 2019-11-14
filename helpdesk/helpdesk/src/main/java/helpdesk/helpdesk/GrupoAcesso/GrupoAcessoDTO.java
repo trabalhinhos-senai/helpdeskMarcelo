@@ -9,17 +9,12 @@ public class GrupoAcessoDTO implements Serializable {
 	private final String nomeGrupo;
 			 
 	public GrupoAcessoDTO(Long id, String nomeGrupo) {
-		super();
 		this.id = id;
 		this.nomeGrupo = nomeGrupo;
 	}
 
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getNomeGrupo() {

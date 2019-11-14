@@ -1,6 +1,6 @@
 package helpdesk.helpdesk;
 
-public class Config {
+public class Confige {
 	
 	 private final int id;
 	 private final String nomeEmpresa;
@@ -15,7 +15,7 @@ public class Config {
 	 
 	 
 	 
-	 public Config(int id, String nomeEmpresa, String telefoneEmpresa, String emailEmpresa, 
+	 public Confige(int id, String nomeEmpresa, String telefoneEmpresa, String emailEmpresa, 
 			 String enderecoEmpresa, String cidade, String bairro, String estado, int numeroEndereco) {
 				this.id = id;
 				this.nomeEmpresa = nomeEmpresa;

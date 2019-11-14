@@ -20,7 +20,8 @@ public class TipoAtividadeEntity {
 		
 	}
 	
-	public TipoAtividadeEntity(String descricao) {
+	public TipoAtividadeEntity(Long id, String descricao) {
+		this.id = id;
 		this.descricao = descricao;
 	}
 	

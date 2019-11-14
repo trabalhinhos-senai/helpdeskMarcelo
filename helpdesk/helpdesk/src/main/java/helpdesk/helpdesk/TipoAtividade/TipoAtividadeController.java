@@ -16,8 +16,9 @@ private final TipoAtividadeRepository tipoAtividadeRepository;
 	}
 	
 	private static TipoAtividadeEntity toEntity(final TipoAtividadeDTO tipoAtividadeDTO) {
+		final Long id = tipoAtividadeDTO.getId();
 		final String descricao = tipoAtividadeDTO.getDescricao();
-		return new TipoAtividadeEntity(descricao);
+		return new TipoAtividadeEntity(id, descricao);
 	} 
 	
 	private static TipoAtividadeDTO toDTO(final TipoAtividadeEntity tipoAtividadeEntity) {

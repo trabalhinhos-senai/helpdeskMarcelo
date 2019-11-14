@@ -16,8 +16,10 @@ public class GrupoAcessoController {
 	}
 	
 	private static GrupoAcessoEntity toEntity(final GrupoAcessoDTO grupoAcessoDTO) {
+		
+		final Long id = grupoAcessoDTO.getId();
 		final String nomeGrupo = grupoAcessoDTO.getNomeGrupo();
-		return new GrupoAcessoEntity(nomeGrupo);
+		return new GrupoAcessoEntity(id, nomeGrupo);
 	}
 	
 	private static GrupoAcessoDTO toDTO(final GrupoAcessoEntity grupoAcessoEntity) {

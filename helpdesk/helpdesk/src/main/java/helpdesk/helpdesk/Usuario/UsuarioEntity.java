@@ -1,7 +1,5 @@
 package helpdesk.helpdesk.Usuario;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,13 +23,16 @@ public class UsuarioEntity  {
 	protected UsuarioEntity() {
 	}
 	
-	public UsuarioEntity(final String nomeUsuario, final String loginUsuario, final String senhaUsuario) {
+	public UsuarioEntity(Long id, String nomeUsuario, String loginUsuario, String senhaUsuario) {
+		super();
+		this.id = id;
 		this.nomeUsuario = nomeUsuario;
 		this.loginUsuario = loginUsuario;
 		this.senhaUsuario = senhaUsuario;
-		
 	}
-	
+
+
+
 	@Override
 	public String toString() {
 		return "UsuarioEntity [id=" + id + ", nomeUsuario=" + nomeUsuario + ", loginUsuario=" + loginUsuario + ", senhaUsuario=" + senhaUsuario + "]";
@@ -40,12 +41,15 @@ public class UsuarioEntity  {
 	public Long getId() {
 		return id;
 	}
+	
 	public String getNomeUsuario() {
 		return nomeUsuario;
 	}
+	
 	public String getLoginUsuario() {
 		return loginUsuario;
 	}
+	
 	public String getSenhaUsuario() {
 		return senhaUsuario;
 	}

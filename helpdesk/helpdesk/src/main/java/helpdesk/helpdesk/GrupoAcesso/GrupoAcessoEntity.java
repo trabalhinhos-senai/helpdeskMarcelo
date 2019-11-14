@@ -10,7 +10,9 @@ import javax.persistence.Id;
 
 @Entity
 (name = "tb_grupoacesso")
+
 public class GrupoAcessoEntity implements Serializable {
+	
 	@Column
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -21,7 +23,8 @@ public class GrupoAcessoEntity implements Serializable {
 		
 	}
 	
-	public GrupoAcessoEntity(String nomeGrupo) {
+	public GrupoAcessoEntity(Long id, String nomeGrupo) {
+		this.id = id;
 		this.nomeGrupo = nomeGrupo;
 	}
 	
