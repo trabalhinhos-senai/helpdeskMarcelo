@@ -15,10 +15,11 @@ public class ClienteController {
 	}
 	
 	private static ClienteEntity toEntity(final ClienteDTO clienteDTO) {
+		final Long id = clienteDTO.getId();
 		final String nomeCliente = clienteDTO.getNomeCliente();
 		final String cpfOuCnpj = clienteDTO.getCpfOuCnpj();
 		
-		return new ClienteEntity(nomeCliente, cpfOuCnpj);
+		return new ClienteEntity(id, nomeCliente, cpfOuCnpj);
 	} 
 	
 	private static ClienteDTO toDTO(final ClienteEntity clienteEntity) {

@@ -41,6 +41,7 @@ public class ClienteEnderecoEntity {
 		return id;
 	}
 	public void setId(Long id) {
+		if(id != null)
 		this.id = id;
 	}
 	public String getEndereco() {

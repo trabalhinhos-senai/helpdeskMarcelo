@@ -36,6 +36,7 @@ public class ClienteEntity {
 	}
 	
 	public void setId(Long id) {
+		if(id != null)
 		this.id = id;
 	}
 	
