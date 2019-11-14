@@ -12,7 +12,7 @@ import javax.persistence.Id;
 (name = "tb_grupoacesso")
 
 public class GrupoAcessoEntity implements Serializable {
-	
+
 	@Column
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

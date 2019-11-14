@@ -25,11 +25,6 @@ public class ClienteEntity {
 		
 	}
 	
-	public ClienteEntity(String nomeCliente, String cpfOuCnpj) {
-		this.nomeCliente = nomeCliente;
-		this.cpfOuCnpj = cpfOuCnpj;
-	}
-	
 	public ClienteEntity(Long id, String nomeCliente, String cpfOuCnpj) {
 		this.id = id;
 		this.nomeCliente = nomeCliente;
