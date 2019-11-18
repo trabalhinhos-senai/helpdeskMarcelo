@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity (name = "tb_cliente_endereco")
 public class ClienteEnderecoEntity {
 	
@@ -18,6 +19,7 @@ public class ClienteEnderecoEntity {
 	private String cidade;
 	private String estado;
 
+
 	public ClienteEnderecoEntity() {
 		super();
 	}
@@ -29,13 +31,17 @@ public class ClienteEnderecoEntity {
 		this.bairro = bairro;
 		this.cidade = cidade;
 		this.estado = estado;
+		
 	}	
 	
+
+
 	@Override
 	public String toString() {
 		return "ClienteEnderecoEntity [id=" + id + ", endereco=" + endereco + ", numero=" + numero + ", bairro="
 				+ bairro + ", cidade=" + cidade + ", estado=" + estado + "]";
 	}
+
 
 	public Long getId() {
 		return id;

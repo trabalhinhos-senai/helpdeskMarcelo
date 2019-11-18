@@ -10,6 +10,7 @@ public class ClienteEnderecoDTO {
 	private final String bairro;
 	private final String cidade;
 	private final String estado;
+
 	
 	public ClienteEnderecoDTO(Long id, String endereco, String numero, String bairro, String cidade, String estado) {
 		super();
@@ -19,6 +20,7 @@ public class ClienteEnderecoDTO {
 		this.bairro = bairro;
 		this.cidade = cidade;
 		this.estado = estado;
+	
 	}
 
 	public static ClienteEnderecoDTO getNullValue() {
@@ -48,5 +50,7 @@ public class ClienteEnderecoDTO {
 	public String getEstado() {
 		return estado;
 	}
+
+	
 	
 }
